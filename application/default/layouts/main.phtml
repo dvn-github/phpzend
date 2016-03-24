@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<title>Sistema de usuarios</title>
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="/jquery/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/bootbox/bootbox.min.js"></script>
+
+</head>
+<body>
+	<nav class="navbar navbar-default sin-margen-inferior" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<a href="#" class="titulo navbar-brand">Sistema de usuarios</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<fb:login-button scope="public_profile,email" onlogin="checkLoginState();" style="margin: 10px; display: none;"></fb:login-button>
+					<!--CERRAR SESION 
+						<li class="dropdown">
+							<a href="" class="dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown">
+								<img src="{{ url_foto }}" alt="" class="img-circle">
+								<strong>{{ name }}</strong>
+								<span class="glyphicon glyphicon-chevron-down"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="/logout">Logout</a></li>
+							</ul>
+						</li>
+					-->
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<?php echo $this->layout()->content; ?>
+</body>
+	<?php echo $this->headLink(); ?>
+	<?php echo $this->headScript(); ?>
+</html>
